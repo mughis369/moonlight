@@ -1,0 +1,454 @@
+div#carwash-packages-container,
+div#carwash-menu-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+div#carwash-packages-container *,
+div#carwash-menu-container *{
+	font-family: inherit,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+div#carwash-packages-container *,
+div#carwash-menu-container *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row-packages {
+    display: block;
+}
+
+.col-package {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* These boxes have a width of 32% each. The remaining width of 4% (i.e. 32 x 3 = 96%) will be used to create the space between the boxes */
+.row-packages.col-packages-size-3 .col-package {
+    width: 33.33333333%;
+    float: left;
+}
+.row-packages.col-packages-size-4 .col-package {
+    width: 25%;
+    float: left;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .row-packages.col-packages-size-4 .col-package {
+        width: 50%;
+        margin-bottom: 30px
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .row-packages .col-package {
+        width: 100% !important;
+    }
+}
+.carwash-packages-title,
+.carwash-menu-title {
+    text-align: center;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 24px;
+    text-transform: uppercase;
+    color: #4d576c;
+    margin-bottom: 20px;
+    padding-top: 24px;
+    display: inline-block;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.carwash-packages-title:before,
+.carwash-menu-title:before {
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    height: 4px;
+    left: 50%;
+    bottom: 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background-color: #a2aaba;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+.package-logo {
+    padding: 0;
+}
+
+.package-logo .package-logo-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.package-card {
+    display: block;
+    /* Height controlled by jquery matchHeight */
+    background: white;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    color: #3b404e;
+    border-style: solid;
+    overflow: hidden;
+    border-width: 4px 1px 1px;
+    border-color: #a2aaba #f1f5f9 #f1f5f9;
+    position: relative;
+}
+
+.package-name {
+    text-align: center;
+    padding: 15px;
+}
+
+.package-one-time-price {
+    text-align: center;
+    padding: 15px;
+    background-color: #e8ecf8;
+    border-top: solid 1px #d5dbed;
+}
+
+.single-price {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 35px;
+    padding: 15px;
+    background-color: #fff;
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -mox-border-radius: 50%;
+    margin: 0 auto;
+    border: solid 2px #c3cbe1;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.single-price .dollar-sign {
+    position: absolute;
+    font-size: 15px;
+    top: 10px;
+    left: 10px;
+    font-weight: normal;
+}
+
+.package-title {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.package-one-time-price {
+    text-align: center;
+    padding: 15px;
+    min-height: 100px;
+}
+
+.package-one-time-price.no-membership {
+    min-height: 182px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.package-monthly-subscription {
+    padding: 15px;
+    text-align: center;
+    background-color: #eff3fc;
+    border-top: solid 1px #ffffff;
+    border-bottom: solid 1px #d5dbed;
+}
+
+.package-monthly-subscription.no-membership {
+    display: none;
+}
+
+.package-monthly-subscription .price {
+    display: block;
+    font-weight: 600;
+}
+
+.package-content {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.package-content ul {
+    padding: 15px !important;
+}
+
+.package-content ul li {
+    list-style: none;
+    text-align: center;
+    padding: 4px;
+    border-top: solid 1px #eff3fc;
+    color: #535D7A;
+}
+
+.package-content ul li:first-child {
+    border-top: none;
+}
+
+.package-details-button {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.package-details-button button.control,
+.wash-plans-btn {
+    -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    transition: background .5s;
+    color: #FFF;
+    cursor: pointer;
+    background-color: #2970EC;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    height: 53px;
+    line-height: 53px;
+    display: inline-block;
+    text-decoration: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.premium-packages-description {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+
+.wash-plans-btn-holder {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    display: block;
+}
+
+.wash-plans-btn {
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+.package-details-button button.control:hover,
+.package-details-button button.control:focus,
+.package-details-button button.control:active,
+.wash-plans-btn:hover,
+.wash-plans-btn:focus,
+.wash-plans-btn:active {
+    background-color: #5090FF;
+    text-decoration: none !important;
+    color: #fff;
+}
+
+.membership-desc-text {
+    display: block;
+}
+
+/* Car Wash menu Icons */
+.carwash-menu {
+    padding-left: 10px;
+}
+
+.carwash_services_main {
+    display: inline-block;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+    border: solid 1px #f1f5f9;
+    width: 100%;
+}
+
+.carwash_services_image {
+    float: left;
+    width: 30%;
+    /*min-height: 100px;*/
+}
+.carwash_services_image:empty {
+    display: none;
+}
+
+.carwash_services_content {
+    float: left;
+    width: 70%;
+    padding: 0 15px 0 15px;
+}
+
+.carwash_services_image:empty .carwash_services_content {
+    width: 100%
+}
+
+.carwash_services_content h4 {
+    line-height: 1em;
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #3b404e;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.carwash_services_detail {
+    color: #535D7A;
+    margin: 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.7em;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .carwash_services_image {
+        width: 100%;
+    }
+    .carwash_services_image img {
+        max-height: 110px;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .carwash_services_content{
+        width: 100%;
+    }
+    .carwash_services_content h4 {
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .carwash_services_detail {
+        width: 100%;
+        padding-bottom: 0;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 439px) {
+    .carwash_services_image {
+        width: 100%;
+    }
+    .carwash_services_image img {
+        max-height: 110px;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .carwash_services_content{
+        width: 100%;
+    }
+    .carwash_services_content h4 {
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .carwash_services_detail {
+        width: 100%;
+        padding-bottom: 0;
+        text-align: center;
+    }
+}
+.mix,
+.gap {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mix {
+    margin-bottom: 0;
+    position: relative;
+}
+
+/* Grid Breakpoints */
+/* 2 Columns */
+.mix,
+.gap {
+    width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/* 2 Columns */
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .mix,
+    .gap {
+        width: 100%;
+    }
+}
+
+.carwash-menu-warning {
+    display: block;
+    margin: 0 auto;
+    max-width: 320px;
+    text-align: center;
+    background-color: #ffbece;
+    padding: 10px;
+    border-radius: 20px;
+    color: #e6597c;
+    font-weight: 600;
+}
+
+.membership-renewal-length:before {
+    content: "/";
+}
+
+/* version 3 */
+#sort_button_text {
+	max-width: 150px !important;
+	min-width: 150px !important;
+}
+.purchase-plan-container {
+	text-align: center;
+    padding: 10px;
+}
+
+.purchase-plan-container .btn {
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+	background-color: #e8ecf8;
+	color: #3b404e;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+.purchase-plan-container .btn:hover,
+.purchase-plan-container .btn:focus{
+    background-color: #c5cada 
+}
+.package-details-button .control.mixitup-control-active {
+	pointer-events: none;
+	opacity: 0.5;
+}
